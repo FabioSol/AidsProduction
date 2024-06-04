@@ -1,7 +1,7 @@
 import pandas as pd
 from flask import Flask, request, jsonify
 import subprocess
-from .AidsModel import model_repo_path
+from AidsProduction.AidsModel import model_repo_path
 from src.update_subrepo_data import update_subrepo_data
 from src.predict import predict
 from src.data_drift_detection import should_retrain
