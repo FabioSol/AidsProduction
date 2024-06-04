@@ -1,8 +1,8 @@
 from flask import Flask, request, jsonify
 import subprocess
-from app.AidsModel import model_repo_path
-from app.src.update_subrepo_data import update_subrepo_data
-from app.src.predict import predict
+from AidsModel import model_repo_path
+from src.update_subrepo_data import update_subrepo_data
+from src.predict import predict
 
 REPO_URL = "https://github.com/FabioSol/AidsModel.git"
 CLONE_DIR = "app/AidsModel"
