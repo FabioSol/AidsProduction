@@ -4,7 +4,9 @@ import subprocess
 from AidsModel import model_repo_path
 from src.update_subrepo_data import update_subrepo_data
 from src.predict import predict
-
+from src.data_drift_detection import should_retrain
+from src.model_drift_detection import detect_model_drift
+from src.model_training import train_with_mlflow
 app = Flask(__name__)
 
 
@@ -70,9 +72,13 @@ def inference():
     if not data:
         return jsonify({'message': 'No data received'}), 400
 
+    if should_retrain() or detect_model_drift():
+        train_with_mlflow()
+
     # Perform inference using your model
     prediction = predict(pd.DataFrame(data))
-    print(prediction)
+
+    
     return jsonify({'prediction': prediction}), 200
 
 

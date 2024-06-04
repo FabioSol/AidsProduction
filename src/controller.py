@@ -172,7 +172,7 @@ class Controller:
     def get_predictions(self):
         return self.get_data("predictions")
 
-    def get_joined_data(self):
+    def get_joined_data_for_training(self):
         df1 = self.get_train_data()
         df2 = self.get_new_data()
 
@@ -184,8 +184,21 @@ class Controller:
             df = df1
         else:
             raise Exception("No data found")
-
         return df
+
+    def get_join_data_for_data_drift(self):
+        df1 = self.get_predictions()
+        df2 = self.get_new_data()
+
+        if len(df1) > 0 and len(df2) > 0:
+            df = pd.concat([df1, df2], ignore_index=True)
+        elif len(df1) <= 0:
+            df = df2
+        elif len(df2) <= 0:
+            df = df1
+        else:
+            raise Exception("No data found")
+        return df.drop(['cid'])
 
 
 

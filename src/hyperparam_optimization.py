@@ -5,7 +5,7 @@ from src import hyper_params_path
 
 def optimize_hyper_params():
     controller = Controller()
-    data = controller.get_joined_data()
+    data = controller.get_joined_data_for_training()
     best_trial = optimize_hyperparameters(data)
     best_params = best_trial.params
     with open(hyper_params_path, 'w') as file:
