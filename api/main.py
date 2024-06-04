@@ -78,7 +78,7 @@ def inference():
     # Perform inference using your model
     prediction = predict(pd.DataFrame(data))
 
-    
+
     return jsonify({'prediction': prediction}), 200
 
 

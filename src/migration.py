@@ -10,3 +10,5 @@ def migration():
     controller.insert_new_data(df)
 
 
+if __name__ == '__main__':
+    migration()
