@@ -1,0 +1,3 @@
+[submodule "AidsModel"]
+	path = AidsModel
+	url = https://github.com/FabioSol/AidsModel.git
