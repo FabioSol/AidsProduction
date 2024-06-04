@@ -82,5 +82,3 @@ def inference():
     return jsonify({'prediction': prediction}), 200
 
 
-if __name__ == '__main__':
-    app.run(port=8080)
