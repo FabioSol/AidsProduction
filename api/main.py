@@ -1,11 +1,9 @@
+import pandas as pd
 from flask import Flask, request, jsonify
 import subprocess
 from AidsModel import model_repo_path
 from src.update_subrepo_data import update_subrepo_data
 from src.predict import predict
-
-REPO_URL = "https://github.com/FabioSol/AidsModel.git"
-CLONE_DIR = "app/AidsModel"
 
 app = Flask(__name__)
 
@@ -73,8 +71,8 @@ def inference():
         return jsonify({'message': 'No data received'}), 400
 
     # Perform inference using your model
-    prediction = predict(data)
-
+    prediction = predict(pd.DataFrame(data))
+    print(prediction)
     return jsonify({'prediction': prediction}), 200
 
 

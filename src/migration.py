@@ -10,5 +10,3 @@ def migration():
     controller.insert_new_data(df)
 
 
-
-migration()
