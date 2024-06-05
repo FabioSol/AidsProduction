@@ -1,5 +1,6 @@
-import os
-print(os.listdir(os.path.dirname(__file__)))
+import AidsModel
+import src
+import api
 
 from api.main import app
 
