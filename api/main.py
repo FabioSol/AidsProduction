@@ -13,6 +13,8 @@ app = Flask(__name__)
 api_module_path = os.path.dirname(__file__)
 project_repo_path = os.path.dirname(api_module_path)
 model_repo_path = os.path.join(project_repo_path, "AidsModel")
+model_path = os.path.join(model_repo_path,"model","model.pkl")
+data_path = os.path.join(model_repo_path,"data")
 
 @app.route('/webhook', methods=['POST'])
 def webhook():

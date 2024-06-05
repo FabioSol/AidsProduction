@@ -3,7 +3,7 @@ import os
 import pandas as pd
 
 from src.controller import Controller
-from AidsModel import data_path
+from api.main import data_path
 
 
 def update_subrepo_data():
