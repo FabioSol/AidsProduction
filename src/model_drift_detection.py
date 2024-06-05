@@ -1,6 +1,6 @@
 import pandas as pd
 from scipy.stats import ks_2samp
-from controller import Controller
+from src.controller import Controller
 
 
 def detect_model_drift(threshold=0.05):

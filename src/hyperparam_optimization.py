@@ -1,6 +1,6 @@
 import yaml
 from AidsModel.hyperparam_optimization import optimize_hyperparameters
-from controller import Controller
+from src.controller import Controller
 from src import hyper_params_path
 
 def optimize_hyper_params():
