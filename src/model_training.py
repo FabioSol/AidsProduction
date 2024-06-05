@@ -12,6 +12,8 @@ from AidsModel.data_split import data_split
 from AidsModel.evaluate_model import evaluate_model
 from src.hyperparam_optimization import optimize_hyper_params
 
+mlflow.set_tracking_uri("http://0.0.0.0:5000")
+
 
 def load_previous_model():
     if os.path.exists(model_path):
