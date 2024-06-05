@@ -2,8 +2,8 @@ import os
 
 import pandas as pd
 
-from src.controller import Controller
-from src import data_path
+from AidsProduction.src.controller import Controller
+from AidsProduction.src import data_path
 
 
 def update_subrepo_data():

@@ -1,6 +1,6 @@
 import os.path
 import pickle
-from src import model_path
+from AidsProduction.src import model_path
 
 def predict(X):
     with open(model_path, 'rb') as f:  # Replace 'model.pkl' with your filename
