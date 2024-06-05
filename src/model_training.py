@@ -1,7 +1,7 @@
 import mlflow
 import mlflow.sklearn
 import os
-from AidsModel.pipeline import Pipeline
+from ..AidsModel.pipeline import Pipeline
 from AidsModel import model_path
 from src import artifact_path
 import joblib
