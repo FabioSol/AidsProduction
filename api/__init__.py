@@ -1,1 +1,0 @@
-from AidsModel import model_repo_path, model_path, data_path

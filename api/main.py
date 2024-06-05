@@ -6,12 +6,13 @@ from src.predict import predict
 from src.data_drift_detection import should_retrain
 from src.model_drift_detection import detect_model_drift
 from src.model_training import train_with_mlflow
-from api import model_repo_path
+import os
 
 app = Flask(__name__)
 
-
-
+api_module_path = os.path.dirname(__file__)
+project_repo_path = os.path.dirname(api_module_path)
+model_repo_path = os.path.join(project_repo_path, "AidsModel")
 
 @app.route('/webhook', methods=['POST'])
 def webhook():
