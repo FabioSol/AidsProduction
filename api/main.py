@@ -1,11 +1,11 @@
 import pandas as pd
 from flask import Flask, request, jsonify
 import subprocess
-from AidsProduction.src.update_subrepo_data import update_subrepo_data
-from AidsProduction.src.predict import predict
-from AidsProduction.src.data_drift_detection import should_retrain
-from AidsProduction.src.model_drift_detection import detect_model_drift
-from AidsProduction.src.model_training import train_with_mlflow
+from src.update_subrepo_data import update_subrepo_data
+from src.predict import predict
+from src.data_drift_detection import should_retrain
+from src.model_drift_detection import detect_model_drift
+from src.model_training import train_with_mlflow
 import os
 
 app = Flask(__name__)

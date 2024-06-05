@@ -1,16 +1,16 @@
 import mlflow
 import mlflow.sklearn
 import os
-from AidsProduction.AidsModel.pipeline import Pipeline
-from AidsProduction.AidsModel import model_path
-from AidsProduction.src import artifact_path
+from AidsModel.pipeline import Pipeline
+from AidsModel import model_path
+from src import artifact_path
 import joblib
-from AidsProduction.src.controller import Controller
+from src.controller import Controller
 import yaml
-from AidsProduction.src import hyper_params_path
-from AidsProduction.AidsModel.data_split import data_split
-from AidsProduction.AidsModel.evaluate_model import evaluate_model
-from AidsProduction.src.hyperparam_optimization import optimize_hyper_params
+from src import hyper_params_path
+from AidsModel.data_split import data_split
+from AidsModel.evaluate_model import evaluate_model
+from src.hyperparam_optimization import optimize_hyper_params
 
 mlflow.set_tracking_uri("http://0.0.0.0:5000")
 

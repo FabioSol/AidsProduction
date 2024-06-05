@@ -1,6 +1,6 @@
 import pandas as pd
 from ucimlrepo import fetch_ucirepo
-from AidsProduction.src.controller import Controller
+from src.controller import Controller
 
 
 def migration():

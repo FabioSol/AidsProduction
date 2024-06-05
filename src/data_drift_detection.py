@@ -1,6 +1,6 @@
 import pandas as pd
 from scipy.stats import chi2_contingency
-from AidsProduction.src.controller import Controller
+from src.controller import Controller
 
 
 def detect_data_drift(threshold=0.05):
